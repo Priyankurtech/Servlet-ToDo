@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form  method="post">
+		<fieldset>
+			<table>
+			<tr>
+				<td>Task Name</td>
+				<td><input type="text" name="taskname"></td>
+			</tr>
+				<tr>
+				<td>Task Description</td>
+				<td><input type="text" name="taskdescription"></td>
+			</tr>
+			<tr>
+				<td>Number of days needed</td>
+				<td><input type="text" name="numberofdays"></td>
+			</tr>
+			</table>
+			<br>
+			
+			<button formaction="addtask" type="submit">add</button>
+			<a href="home.jsp"><button style="margin-left: 200px" type="button">cancel</button></a>
+			
+		</fieldset>
+	</form>
+</body>
+</html>

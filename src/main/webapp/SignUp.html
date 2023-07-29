@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="signup" method="post"
+		style="display: flex; flex-flow: row wrap; align-items: center;">
+		<fieldset>
+			<legend>Welcome ToDo SignUp</legend>
+			<label for="a1">Name</label>
+			<input type="text" id="a1" name="name">
+			<br>
+			<br>
+			<label>Gender</label>
+			<label>M</label>
+			<input type="radio" name="gen" value="male">
+			<label>F</label>
+			<input type="radio" name="gen" value="famale">
+			<br>
+			<br>
+			<label for="a4">Mail-Id</label> 
+			<input type="email" id="a4" name="mail" required="required"> 
+			<br>
+			<br>
+			<label for="a5">PhoneNo</label>
+			<input type="tel" pattern="[0-9]{10}" id="a5" name="phoneno" required="required"> 
+			<br>
+			<br>
+			<label for="a6">Address</label> 
+			<textarea rows="5" cols="30" id="a6" name="address"></textarea>
+			<br>
+			<br>
+			<label for="a7">Date Of Birth</label> 
+			<input type="date" id="a7" name="dob" required="required"> 
+			<br>
+			<br>
+			<label for="a8">Password</label> 
+			<input type="password" id="a8" name="password" required="required"> 
+			<br>
+			<br>
+			<button type="submit" name="signup">SignUp</button>
+			<button type="reset" name="cancel">Cancel</button>
+			
+		</fieldset>
+	</form>
+	<br><br>
+			<a href="http://localhost:8055/ToDoApp/login.html"> <button>Already have account?please click here to singn in</button></a>
+</body>
+</html>
