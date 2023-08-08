@@ -7,7 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link href=".">
+
 <style type="text/css">
 table, th, td {
 	border: 1px solid black;
@@ -17,9 +17,8 @@ table, th, td {
 </head>
 <body>
 
-
-
-	<h1>Welcome to ToDo</h1>
+<form method="post">
+<h1>Welcome to ToDo</h1>
 
 	<table style="border: 1px solid black;">
 
@@ -45,9 +44,9 @@ table, th, td {
 			<td><%=task.getTask_date()%></td>
 			<td><%=task.getComplete_before()%></td>
 			<td><%=task.isStatus()%></td>
-			<td><button>change</button></td>
-			<td><button>delete</button></td>
-			<td><button>update</button></td>
+			<td><a href="changestatus?id=<%=task.getId()%>"><button>change</button></a></td>
+			<td><a href="deleterow?id=<%=task.getId()%>"><button>delete</button></a></td>
+			<td><a href="edittask?id=<%=task.getId()%>"><button>Update</button></a></td>
 		</tr>
 		<%
 		}
@@ -56,13 +55,16 @@ table, th, td {
 
 
 	</table>
-	<br>
-	<br>
-	<a href="task.html"><button style="margin-left: 20px">add
-			task</button></a>
-	<button style="margin-left: 500px">delete</button>
-	<a href="login.html"><button type="button">logout</button></a>
+	
 
+</form>
+<br>
+	<br>
+	<a href="addtask"><button style="margin-left: 20px" type="button">add task</button></a>
+	<button style="margin-left: 500px">delete</button>
+	<a href="logout"><button type="button">logout</button></a>
+
+	
 
 </body>
 </html>

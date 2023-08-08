@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -25,28 +26,36 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	String taskdescription=req.getParameter("taskdescription");
 	int numberofdays=Integer.parseInt(req.getParameter("numberofdays"));
 	LocalDate date=LocalDate.now();
-	
-//	Task task=dao.fetchbyname(taskname);
-//	
-//	if (task==null) {
 		Task task=new Task();
-		
 		task.setTask_Name(taskname);
 		task.setTask_date(date);
 		task.setTask_Description(taskdescription);
 		task.setComplete_before(date.plusDays(numberofdays));
 		task.setStatus(false);
-		UserDao dao=new UserDao();
-		dao.save(task);
-		resp.getWriter().print("<h1>task added sucessfully</h1>");
-		List<Task> list= dao.fetchAlltask();
-		req.setAttribute("list", list);
-
-		req.getRequestDispatcher("home.jsp").include(req, resp);
-	   
-	
+		User user=(User)req.getSession().getAttribute("user1");
+		List<Task> list=user.getTasks();
+		if(list==null)
+		{
+			list=new ArrayList<Task>();
+			resp.getWriter().print("<h1>session expired</h1>");
+ 			req.getRequestDispatcher("login.html").include(req, resp);
+		}
+			else
+			{
+				list.add(task);
+				user.setTasks(list);
+				UserDao dao=new UserDao();
+				dao.save(task);
+				dao.update(user);
+				resp.getWriter().print("<h1>task added sucessfully</h1>");
+				req.setAttribute("list", user.getTasks());
+    			req.getRequestDispatcher("home.jsp").include(req, resp);
+			}
+		}
 	}
+
+
 	
 	
-}
+
 

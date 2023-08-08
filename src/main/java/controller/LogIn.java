@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.UserDao;
 import dto.Task;
@@ -29,9 +30,12 @@ public class LogIn extends HttpServlet{
 		} 
     	else {
     		if (user1.getPassword().equals(password)) {
+    			HttpSession httpSession=req.getSession();
+    			httpSession.setAttribute("user1", user1);
+    			httpSession.setMaxInactiveInterval(30);
     			resp.getWriter().print("<h1>login sucessfull</h1>");
-    			List<Task> list=dao.fetchAlltask();
-    			req.setAttribute("list", list);
+    	
+    			req.setAttribute("list", user1.getTasks());
     			req.getRequestDispatcher("home.jsp").include(req, resp);
 			}
     		else {

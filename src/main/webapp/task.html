@@ -10,21 +10,21 @@
 			<table>
 			<tr>
 				<td>Task Name</td>
-				<td><input type="text" name="taskname"></td>
+				<td><input type="text" name="taskname" required="required"></td>
 			</tr>
 				<tr>
 				<td>Task Description</td>
-				<td><input type="text" name="taskdescription"></td>
+				<td><input type="text" name="taskdescription" required="required"></td>
 			</tr>
 			<tr>
 				<td>Number of days needed</td>
-				<td><input type="text" name="numberofdays"></td>
+				<td><input type="tel" name="numberofdays" required="required"></td>
 			</tr>
 			</table>
 			<br>
 			
 			<button formaction="addtask" type="submit">add</button>
-			<a href="home.jsp"><button style="margin-left: 200px" type="button">cancel</button></a>
+			<a href="backtohome"><button style="margin-left: 200px" type="button">cancel</button></a>
 			
 		</fieldset>
 	</form>
