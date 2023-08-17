@@ -9,7 +9,7 @@
 - [Setup](#setup)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Description
 Briefly introduce your project and its purpose. Mention that it's a TODO list application developed using Servlets, which allows users to manage their tasks efficiently.
@@ -52,8 +52,7 @@ For example:
 ## Contributing
 Encourage other developers to contribute to your project. Explain how they can submit bug reports, feature requests, or pull requests. Mention any specific guidelines or code conventions they should follow.
 
-## License
-Specify the license under which your project is distributed. For example, if you're using an open-source license like MIT, include the license text in a separate file and provide a link to it.
+
 
 ---
 
