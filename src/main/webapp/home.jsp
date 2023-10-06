@@ -24,7 +24,7 @@ table, th, td {
 
 		<tr>
 			<th>ID</th>
-			<th>Task Name</th>
+			<th>Task  Name</th>
 			<th>Task Description</th>
 			<th>Task Date</th>
 			<th>Complete Before</th>
