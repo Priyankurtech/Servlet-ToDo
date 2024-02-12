@@ -60,7 +60,7 @@ table, th, td {
 </form>
 <br>
 	<br>
-	<a href="addtask"><button style="margin-left: 20px" type="button">add task</button></a>
+	<a href="task.html"><button style="margin-left: 20px" type="button">add task</button></a>
 	<button style="margin-left: 500px">delete</button>
 	<a href="logout"><button type="button">logout</button></a>
 
