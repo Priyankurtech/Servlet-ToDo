@@ -1,0 +1,21 @@
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled classes
+*.class
+
+# Ignore Maven specific files
+mvnw
+.mvn/
